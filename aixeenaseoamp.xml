@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3" type="plugin" group="aixeenaseo">
+	<name>Aixeena SEO - AMP pages</name>
+	<author>Ciro Artigot</author>
+	<creationDate>May 2018</creationDate>
+	<copyright>Copyright (C) 2018 Ciro Artigot. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@aixeena.org</authorEmail>
+	<authorUrl>www.aixeena.org</authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[<div style="background-color:#f2f2f2; padding:20px; margin:20px; border-radius:10px;">
+	<p><strong>Aixeena SEO AMP pages</strong> it is a plugin to create AMP pages from Joomla articles.</p>
+	<div style="clear:both"></div></div>]]>
+	</description>
+	
+	<files>
+		<folder>classes</folder>
+		<folder>files</folder>
+		<filename plugin="aixeenaseoamp">aixeenaseoamp.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<!--
+	<updateservers>
+        <server type="extension" priority="2" name="Aixeena updates">
+				http://aixeena.org/updates/aixeena_seo/aixeenaseoamp.xml
+        </server>
+    </updateservers>
+	-->
+	
+	<config>
+	
+	<fields name="params">
+		
+		<fieldset name="basic">
+			
+			<field name="amppages" type="radio"
+						class="btn-group" default="1" description="" label="AMP Pages">
+				<option value="0">Disable</option>
+				<option value="1">Enable</option>
+			</field>
+			
+			<field name="amp_organization" type="text" default="Organization" label="Publisher Type" description="" />
+			
+			<field name="amp_name" type="text" default="" label="Publisher name" description="" />
+			
+			<field 
+				  name="amp_logo"
+				  type="media"
+				  label="Publisher Logo (500px x 78px)"
+				  description=""
+				  class="inputbox"
+				  directory="images/" 
+				/>
+				
+			<field name="amp_logo_link" type="text" default="" label="Publisher Logo link" description="" />
+				
+			<field name="amp_analytics" type="radio"
+						class="btn-group" default="0" description="" label="Google Analytics">
+				<option value="0">Disable</option>
+				<option value="1">Enable</option>
+			</field>
+			
+			<field name="amp_analytics_code" type="text" default="" label="Google Analytics Code" description="" />
+			
+			<field name="amp_schema" type="text" default="http://schema.org/NewsArticle" label="Schema" description="" />
+			
+			<field name="amp_tags_title" type="text" default="Tags:" label="Tags header" description="" />
+			
+			<field 
+				  name="amp_pielogo"
+				  type="media"
+				  label="Footer Logo"
+				  description=""
+				  class="inputbox"
+				  directory="images/" 
+				/>
+				
+			<field name="amp_legal_link" type="text" default="" label="Legal link" description="" />
+			<field name="amp_legal_text" type="text" default="" label="Legal text" description="" />
+			
+				<field
+				name="remove"
+				type="textarea"
+				default=""
+				label="Words to remove from text"
+				description="Separated by comas"
+				rows="3"
+				cols="40"
+			/>
+			
+			<field
+				name="remove2"
+				type="textarea"
+				default=""
+				label="Joomla plugins to remove"
+				description="Separated by comas"
+				rows="3"
+				cols="40"
+			/>
+			
+		</fieldset>
+	
+	</fields>	
+	
+	</config>
+</extension>
