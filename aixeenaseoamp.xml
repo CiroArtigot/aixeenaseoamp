@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3" type="plugin" group="aixeenaseo">
+<extension version="3" type="plugin" group="system">
 	<name>Aixeena SEO - AMP pages</name>
 	<author>Ciro Artigot</author>
 	<creationDate>May 2018</creationDate>
